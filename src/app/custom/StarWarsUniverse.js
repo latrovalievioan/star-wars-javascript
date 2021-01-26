@@ -1,6 +1,6 @@
 import Entity from "./Entity";
 
-class StarWarsUniverse {
+export default class StarWarsUniverse {
   constructor() {
     this.entities = [];
   }
@@ -19,5 +19,3 @@ class StarWarsUniverse {
     }
   }
 }
-
-export default StarWarsUniverse;
