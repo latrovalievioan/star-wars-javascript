@@ -15,7 +15,6 @@ export default class StarWarsUniverse {
 
       const entity = new Entity(currentNodeName, currentNodeData);
       this.entities.push(entity);
-      console.log(this.entities);
     }
   }
 }
