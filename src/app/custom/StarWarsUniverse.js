@@ -1,9 +1,4 @@
-class Entity {
-  constructor(name, data) {
-    this.name = name;
-    this.data = data;
-  }
-}
+import Entity from "./Entity";
 
 class StarWarsUniverse {
   constructor() {
@@ -25,4 +20,4 @@ class StarWarsUniverse {
   }
 }
 
-module.exports = StarWarsUniverse;
+export default StarWarsUniverse;
