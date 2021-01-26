@@ -37,7 +37,6 @@ export default class Application extends EventEmitter {
     const fetchPlanets = async () => {
       const planetsResult = await fetch("https://swapi.dev/api/planets/");
       const parsedPlanets = await planetsResult.json();
-      console.log(parsedPlanets);
       this.data.planets = parsedPlanets.results;
       this.data.count = parsedPlanets.count;
       let currentPlanet = parsedPlanets;
@@ -47,11 +46,10 @@ export default class Application extends EventEmitter {
       }
     };
     await fetchPlanets();
-    //task-2
+    //task-2 task-3
     const universe = new StarWarsUniverse();
     await universe.init();
     this.data.universe = universe;
     this.emit(Application.events.APP_READY);
-    console.log(this.data);
   }
 }
