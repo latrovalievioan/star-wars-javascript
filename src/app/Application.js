@@ -32,10 +32,19 @@ export default class Application extends EventEmitter {
    */
   async init() {
     // Initiate classes and wait for async operations here.
+
+    //task-1
+    const fetchPlanets = async () => {
+      const planetsResult = await fetch("https://swapi.dev/api/planets/");
+      const parsedPlanets = await planetsResult.json();
+      this.data.planets = parsedPlanets.results;
+      this.data.count = parsedPlanets.count;
+    };
+    fetchPlanets();
+    //task-2
     const universe = new StarWarsUniverse();
     await universe.init();
     this.data.universe = universe;
-    console.log(this.data);
     this.emit(Application.events.APP_READY);
   }
 }
