@@ -18,6 +18,8 @@ export default class Starship {
       currentConsumable[1] === "week"
     ) {
       this._consumables = Number(currentConsumable[0]) * 7;
+    } else {
+      this._consumables = Number(currentConsumable[0]);
     }
   }
 
