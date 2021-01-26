@@ -40,7 +40,7 @@ export default class Application extends EventEmitter {
       this.data.planets = parsedPlanets.results;
       this.data.count = parsedPlanets.count;
     };
-    fetchPlanets();
+    await fetchPlanets();
     //task-2
     const universe = new StarWarsUniverse();
     await universe.init();
