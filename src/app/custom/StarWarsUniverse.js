@@ -33,6 +33,7 @@ export default class StarWarsUniverse {
       currentShip.parsePassengers();
       this.starships.push(currentShip);
     });
+    console.log(this.starships);
     return this.starships;
   }
 
