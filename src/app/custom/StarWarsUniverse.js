@@ -76,6 +76,7 @@ export default class StarWarsUniverse {
     this.starships.forEach((starship) => {
       if (starship.maxDaysInSpace > bestStarshipDays) {
         bestShip = starship;
+        bestStarshipDays = bestShip.maxDaysInSpace;
       }
     });
     return bestShip;
