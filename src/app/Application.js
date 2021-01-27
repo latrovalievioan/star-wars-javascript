@@ -50,6 +50,7 @@ export default class Application extends EventEmitter {
     const universe = new StarWarsUniverse();
     await universe.init();
     this.data.universe = universe;
+    console.log(await this.data.universe.theBestStarship);
     this.emit(Application.events.APP_READY);
   }
 }
